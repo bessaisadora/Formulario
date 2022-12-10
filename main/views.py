@@ -1,6 +1,6 @@
 # Transformamos o arquivo forms em um html
 from django.shortcuts import render
-from main.forms import AlunoForm
+from main.forms import *
 
 
 def cadastro_aluno(request):
@@ -13,4 +13,4 @@ def cadastro_aluno(request):
     else: #Se eu quero carregar as informações, basta carregar o forms
         forms = AlunoForm()
         
-    return render(request,'form.html', { 'form' : forms})
+    return render(request,'form.html', { 'form' : forms}) 
