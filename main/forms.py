@@ -16,7 +16,7 @@ class AlunoForm(forms.ModelForm):
         fields = '__all__'
 
         widgets = {
-            #'minicursos': forms.CheckboxSelectMultiple(),
+            'minicursos': forms.CheckboxSelectMultiple(),
             'sexo': forms.RadioSelect(),
             'data_nascimento': forms.TimeInput(attrs={'type': 'date'}),
         }

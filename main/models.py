@@ -11,11 +11,11 @@ LISTA_CURSO= [
     ('Química', 'Química'),
 ]
 #Criamos o modelo para cadastro de minicursos
-#class Minicurso(models.Model):
-#    nome_minicurso = models.CharField(max_length=150)
+class Minicurso(models.Model):
+    nome_minicurso = models.CharField(max_length=150)
 
-#    def __str__(self) -> str:
-#        return self.nome_minicurso
+    def __str__(self) -> str:
+        return self.nome_minicurso
 
 #Criamos o modelo para cadastro de alunos
 class Aluno(models.Model):
@@ -26,7 +26,7 @@ class Aluno(models.Model):
     endereço = models.CharField(max_length=150)
     sexo = models.CharField(max_length=150, choices=LISTA_SEXO)
     curso = models.CharField(max_length=150, choices=LISTA_CURSO)
-    #minicursos = models.ManyToManyField(Minicurso)
+    minicursos = models.ManyToManyField(Minicurso)
 
     def __str__(self) -> str:
         return self.nome
